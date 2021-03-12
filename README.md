@@ -84,25 +84,37 @@ webbench个性化测试
 
 - [ ] ET + LT模式
     ```C++
-    ./webserver -p 12345 -m 0 -c 1
+    ./webserver -p 12345 -m 1 -c 0
     ```
     ![image](https://github.com/ustc-hb/WebServer/blob/main/resource/webbench-res/ET%2BLT.jpg)    
     
 - [ ] ET + ET模式
     ```C++
-    ./webserver -p 12345 -m 0 -c 1
+    ./webserver -p 12345 -m 1 -c 1
     ```
      ![image](https://github.com/ustc-hb/WebServer/blob/main/resource/webbench-res/ET%2BET.jpg)     
 > * 日志写入方式，代码中使用同步日志，可以修改为异步写入.
 
 - [x] 同步写入日志
+* 默认模式	
 	
 
 - [ ] 异步写入日志
-
+    ```C++
+    ./webserver -p 12345 -l 1
+    ```
+     ![image](https://github.com/ustc-hb/WebServer/blob/main/resource/webbench-res/LT%2BLT_log1.jpg)  
 
 > * 选择定时器类型，默认选择升序链表定时器，可以选择使用最小堆定时器。
 - [x] 升序链表定时器
-	
+* 默认模式
 
 - [ ] 最小堆定时器
+* 需要在程序中更改定时器模式
+
+    ```C++
+    main.cpp
+    26 // #define TIME_LIST // 排序定时器链表
+    27 #define TIME_HEAP // 时间堆
+    ```
+     ![image](https://github.com/ustc-hb/WebServer/blob/main/resource/webbench-res/LT%2BLT_timer1.jpg)  
