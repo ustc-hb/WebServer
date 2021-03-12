@@ -74,22 +74,25 @@ webbench个性化测试
     ```C++
     ./webserver -p 12345 -m 0 -c 0
     ```
+    ![image](https://github.com/ustc-hb/WebServer/blob/main/LT%2BLT.jpg)
+
 - [ ] LT + ET模式
     ```C++
     ./webserver -p 12345 -m 0 -c 1
     ```
-
+    ![image](https://github.com/ustc-hb/WebServer/blob/main/LT%2BET.jpg)
 
 - [ ] ET + LT模式
     ```C++
     ./webserver -p 12345 -m 0 -c 1
     ```
-    
+    ![image](https://github.com/ustc-hb/WebServer/blob/main/ET%2BLT.jpg)    
     
 - [ ] ET + ET模式
     ```C++
     ./webserver -p 12345 -m 0 -c 1
     ```
+     ![image](https://github.com/ustc-hb/WebServer/blob/main/ET%2BET.jpg)     
 > * 日志写入方式，代码中使用同步日志，可以修改为异步写入.
 
 - [x] 同步写入日志
